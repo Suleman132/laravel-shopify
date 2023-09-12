@@ -16,10 +16,11 @@
                             <thead>
                             <tr>
                                 <th>Order Id</th>
+                                <th>Product Name</th>
                                 <th>Price</th>
                                 <th>Currency</th>
-                                <th>Financial Status</th>
-                                <th>Order Name</th>
+                                <th> Status</th>
+
 
                             </tr>
                             </thead>
@@ -28,10 +29,11 @@
                                 <tr>
                                     @if ($row['financial_status']=="refunded")
                                     <td> {{ $row['id']}}</td>
+                                    <td>{{ $row['line_items'][0]['name'] }}</td>
                                     <td> {{ $row['current_subtotal_price']   }}</td>
                                     <td> {{ $row['currency'] }}</td>
                                     <td> {{ $row['financial_status'] }}</td>
-                                    <td>{{ $row['line_items'][0]['name'] }}</td>
+
                                     @endif
                                 </tr>
                             @endforeach

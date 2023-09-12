@@ -49,10 +49,11 @@
 
 
 <!-- Bootstrap 4 -->
-<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
+<script src="{{asset('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 @yield('js-link')
 <!-- AdminLTE App -->
-<script src="dist/js/adminlte.js"></script>
+<script src="{{asset('dist/js/adminlte.js')}}"></script>
 
 </body>
 </html>
